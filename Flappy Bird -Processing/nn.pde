@@ -40,17 +40,14 @@ class NeuralNetwork
   {
     temp = new Matrix(inputs_array.size(), 1);
     Matrix inputs = temp.fromArray(inputs_array);
-    //println("inputs: " + inputs.data);
  
     temp = new Matrix(this.weights_ih.rows, inputs.cols);
     Matrix hidden = temp.multiply(this.weights_ih, inputs);
-    //println("hidden: " + hidden.data);
     hidden.add(this.bias_h);
     hidden.mapsigmoid();
     
     temp = new Matrix(this.weights_ho.rows, hidden.cols);
     Matrix outputs = temp.multiply(this.weights_ho, hidden);
-    //println(outputs.data);
     outputs.add(this.bias_o);
     outputs.mapsigmoid();
     return outputs.toArray();
