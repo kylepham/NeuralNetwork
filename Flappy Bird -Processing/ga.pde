@@ -21,9 +21,7 @@ void calculateFitness()
   //normalize
   for (int i = 0; i < prevBirds.size(); i++)
   {
-    //println(prevBirds.get(i).fitness);
     prevBirds.get(i).fitness /= sum; // birds' fitness range in [0..1]
-    //println(prevBirds.get(i).fitness);
   }
 }
 
