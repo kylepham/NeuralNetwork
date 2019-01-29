@@ -43,14 +43,12 @@ class Bird
     inputs.add((double)pipeList.get(this.frontPipe(pipeList)).x / screenWidth);
     inputs.add((double)pipeList.get(this.frontPipe(pipeList)).topPipe / screenHeight);
     inputs.add((double)pipeList.get(this.frontPipe(pipeList)).bottomPipe / screenHeight);
-    //println(this.frontPipe(pipeList));
+
     ArrayList<Double> outputs = this.brain.feedForward(inputs);
-    
     if (outputs.get(0) > outputs.get(1))
     {
       this.up();  
     }
-//println(outputs);
   }
   
   void crossOver(NeuralNetwork partner)
