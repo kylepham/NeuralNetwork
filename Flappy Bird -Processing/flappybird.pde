@@ -50,18 +50,6 @@ void setup()
   //Initiate new pipe(s)
   pipes = new ArrayList<Pipe>();
   pipes.add(new Pipe());
-  //Matrix matrix = new Matrix(3, 2);
-  //matrix.randomize();
-  //println(matrix.data);
-  //ArrayList<Double> temp = new ArrayList<Double>();
-  //temp.add((double)random(0.9));
-  //temp.add((double)random(0.9));
-  //NeuralNetwork brain1 = new NeuralNetwork(2, 2, 2);
-  //println(brain1.weights_ih.data);
-  //NeuralNetwork brain2 = new NeuralNetwork(2, 2, 1);
-  //println(temp);
-  //ArrayList<Double> outputs = brain1.feedForward(temp);
-  //println(outputs);
 }
 
 void draw()
@@ -97,7 +85,6 @@ void draw()
       {
         prevBirds.add(birds.get(j));
         birds.remove(j);
-        //println("added to prevBirds, length" + prevBirds.size());
       }
     }
     //off-screened pipe(s)
@@ -124,7 +111,6 @@ void draw()
 
 void gameReset()
 {
-  //if (prevBirds.size() != 0)
   // --------------------- calls for genetic algorithm --------------------- //
   birdEvolution();
   // ------------------- end calls for genetic algorithm ------------------- //
